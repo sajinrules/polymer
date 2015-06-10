@@ -1,0 +1,39 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="repeat-element">
+  <style>
+    /* CSS rules for your element */
+  </style>
+    <template is="dom-repeat" items="{{employees}}">
+      <li  class="collection-item" onclick="Materialize.toast('An item deleted', 4000)">
+        <div>test{{employees}} 
+          <a href="#!" class="secondary-content"><i class="mdi-action-delete small"></i></a>
+        </div>
+      </li>
+    </template>
+</dom-module>
+
+<script>
+  // element registration
+  Polymer({
+    is: "repeat-element",
+    properties: {
+      employees: {
+        type: Array,
+        value: [
+          {first: 'Bob', last: 'Smith'},
+          {first: 'Sally', last: 'Johnson'}
+        ]
+      }
+    }
+
+    // add properties and methods on the element's prototype
+
+    // ready: function() {
+    //   this.employees = [
+    //       {first: 'Bob', last: 'Smith'},
+    //       {first: 'Sally', last: 'Johnson'}
+    //   ]
+    // }
+  });
+</script>

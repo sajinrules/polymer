@@ -1,0 +1,25 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="list-element">
+  <style>
+    /* CSS rules for your element */
+  </style>
+  <template>
+    <div class="container">
+      <paper-input label="Your name here"></paper-input>
+      <paper-button class="teal"  onclick="Materialize.showStaggeredList('#staggered-test')"><i class="mdi-content-add-circle-outline small"></i></paper-button>
+      <div id="greeting"></div>
+      <ul class="collection with-header" id="staggered-test">
+        <li class="collection-header"><h4>to-do list</h4></li>
+        <content></content>
+      </ul>
+    </div>
+  </template>
+</dom-module>
+
+<script>
+  // element registration
+  Polymer({
+    is: "list-element"
+  });
+</script>

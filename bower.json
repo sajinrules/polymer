@@ -17,6 +17,7 @@
     "platform": "Polymer/platform#~0.4.2",
     "iron-elements": "PolymerElements/iron-elements#~1.0.0",
     "iron-a11y-announcer": "PolymerElements/iron-a11y-announcer#^1.0.0",
-    "paper-input": "PolymerElements/paper-input#^1.0.0"
+    "paper-input": "PolymerElements/paper-input#^1.0.0",
+    "materialize": "~0.96.1"
   }
 }
