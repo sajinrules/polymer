@@ -1,30 +1,33 @@
-<link rel="import"
-      href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/polymer/polymer.html">
 
-<dom-module id="picture-frame">
-  <!-- scoped CSS for this element -->
+<dom-module id="element-name">
   <style>
-    div {
-      display: inline-block;
-      background-color: #ccc;
-      border-radius: 8px;
-      padding: 4px;
-    }
+    /* CSS rules for your element */
   </style>
   <template>
-    <div>
-      <!-- any children are rendered here -->
-      <content></content>
-    </div>
+    
+    <input bind-value="{{employee}}" placeholder="Your name here..."> 
+    
+    <template is="dom-repeat" items="{{employees}}">
+        <div>First name: <span>{{item.first}}</span></div>
+        <div>Last name: <span>{{item.last}}</span></div>
+    </template>
+
   </template>
 </dom-module>
 
 <script>
+  // element registration
   Polymer({
-    is: "picture-frame",
-    // add a callback to the element's prototype
+    is: "element-name",
+
+    // add properties and methods on the element's prototype
+
     ready: function() {
-      this.innerHTML = "I'm a proto-element. Check out my prototype!"
+      this.employees = [
+          {first: 'Bob', last: 'Smith'},
+          {first: 'Sally', last: 'Johnson'}
+      ]
     }
   });
 </script>
